@@ -1,0 +1,49 @@
+<style>
+    .cont {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
+<div class="text">
+    <p>Node modules - Folder that contains modules. Modules are the blocks of encapsulated code
+        that communicates with an external application on the basis of their related functionality.
+        Modules can be a single file or a collection of multiples files/folders.
+    </p>
+    <br>
+    <p>
+        Package.json - A json file with 3 main functions:</p>
+    <p>
+        - Containing metadata
+    </p>
+    <pre>
+        <code>
+            {
+                "name": "ssr",
+                "version": "1.0.0",
+                "description": "A project",
+                "main": "app.js",            
+        </code>
+    </pre>
+    <p>- Containing/specifing scripts that set up the environment and help run the application. Life cycle methods.</p>
+    <pre>
+        <code>
+            "scripts": {
+                "start-dev": "cross-env PORT=3000 nodemon app.js",
+                "start-prod": "node app.js",
+                "run": "node file.js"
+              },            
+        </code>
+    </pre>
+    <p>- Managing dependencies used by the project</p>
+    <pre>
+        <code>
+            "dependencies": {
+                "express": "^4.17.2"
+              },
+              "devDependencies": {
+                "cross-env": "^7.0.3"
+              }        
+        </code>
+    </pre>
+</div>

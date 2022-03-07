@@ -1,0 +1,39 @@
+<div class="text">
+    <p>
+        Express.js is a free and open-source web application framework for Node.js.
+        It is designed for building web applications and APIs and is the standard server framework for Node.js.
+    </p>
+    <br>
+    <p>
+        How to set up an express server ?
+    </p>
+    <br>
+    <p>
+        Line 1: We are bringing in the express framework and storing it in a constant.
+    </p>
+    <p>
+        Line 2: We are initializing the express framework and saving it into another constant.
+    <p>
+        We can also do it in one line and create only the initialized constant.
+    </p>
+
+    </p>
+    <pre>
+        <code>
+            const express = require("express");
+            const app = express(); 
+            //or
+            const app = require("express")();
+        </code>
+    </pre>
+    <p>Making the server run on a specified port</p>
+    <pre>
+        <code>
+            const PORT = 8080;
+            app.listen(PORT, () => {
+                console.log("Server started on port:", PORT);
+            });         
+        </code>
+    </pre>
+
+</div>

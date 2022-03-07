@@ -1,0 +1,61 @@
+<div class="text">
+    <p>After creating an express server, endpoinds and routing can be created for it.
+        A get request example:
+    </p>
+<pre>
+    <code>
+        app.get("/", (req,res) => {
+            res.send({ message:"Welcome." });
+        });
+    </code>
+</pre>
+    <p>
+        Instead of "get" other http methods can be used like "post" or "delete".
+        "req" and "res" stand for request and response and are variables passed through the function.
+        Request is what we revice from the user and contains things like parameters while response is
+        what the server should send back. Express doesn't have a deafult setup for what sort of response
+        it should send back. Frequently we want the server to send JSON. In order to set it up
+        we need to make the app use build in tools for JSON like so.
+    </p>
+
+    <pre>
+        <code>
+        app.use(express.json());
+        </code>
+    </pre>
+    
+    <p>
+        There are also two ways of passing the parameters on the endpoint. 
+        Either as path variables or the queary strings. It can look like this. 
+    </p>
+    <br>
+    <p>
+        url/variable
+    </p>
+    <br>
+    <p>
+        or like this  
+    </p>
+    <br>
+    <p>
+        url/?page=value1&limit=value2
+    </p>
+    <br>
+    <p>
+        And here is a post example with endpoint with route parameter.
+    </p>
+    <pre>
+        <code>
+            app.post("user/:userID",(req,res)=>{
+                res.send(req.body);
+            });
+        </code>
+    </pre>
+    <br>
+    <p>
+        The paramaters are stored in the param object int the req. They can be accessed like so.
+        req.params.(variable name)
+    </p>
+    <br>
+
+</div>

@@ -1,0 +1,65 @@
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    td,
+    th {
+        border: 1px solid black;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    tr:first-child {
+        background-color: #7b7fb9;
+        font-weight: bolder;
+    }
+</style>
+<div class="text">
+    <p>REST API should have ordered endpoints corenponding with http methods. Like so.</p>
+    <br>
+    <table>
+        <tr>
+            <th>HTTP Method</th>
+            <th>Endpoint</th>
+            <th>What it does</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/(resource name)</td>
+            <td>Retrieves all the ressources</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/(resource name)/ID</td>
+            <td>Retrieves a single ressource by ID</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/(resource name)</td>
+            <td>Create a new ressource</td>
+        </tr>
+        <tr>
+            <td>PUT</td>
+            <td>/(resource name)/ID</td>
+            <td>Update a ressource by ID</td>
+        </tr>
+        <tr>
+            <td>PATCH</td>
+            <td>/(resource name)/ID</td>
+            <td>Partially updates a ressource ID</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/(resource name)/ID</td>
+            <td>Deletes an existing ressource by ID</td>
+        </tr>
+    </table>
+</div>

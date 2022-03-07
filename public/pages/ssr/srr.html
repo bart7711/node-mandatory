@@ -1,0 +1,25 @@
+<div class="text">
+    <p>Server side rendering with express is quite simple. Instead on using javascript DOM manipulation
+        in order to generate an HTML page we put the page together on the server side and send it back
+        to the user.
+    </p>
+    <br>
+    <pre>
+        <code>
+            const fs = require("fs");
+            const page = fs.readFileSync("path to the html file").toString();
+
+            //and then 
+
+            app.get("/", (req, res) => {
+                res.send(page);
+            });
+        </code>
+    </pre>
+    <br>
+    <p>
+        Since what we send back is a String we
+        can manipulate it, modify it and add some html files together.
+        This way we can for example have some HTML elements witch are reusable.
+    </p>
+</div>

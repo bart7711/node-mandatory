@@ -57,5 +57,14 @@
         req.params.(variable name)
     </p>
     <br>
+    <p>We can also send back the files. With "__dirname" being the directory we are in now.</p>
+    <br>
+    <pre>
+        <code>
+            app.get("file",(req,res)=>{
+                res.sendFile(__dirname + "/public/frontpage/frontpage.html");
+            });
+        </code>
+    </pre>
 
 </div>
